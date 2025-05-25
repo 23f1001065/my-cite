@@ -2,7 +2,7 @@ name: git-action-first
 on: push
 jobs:
   test:
-    runs-on: ubantu-latest
+    runs-on: ubantu
     steps:
       - name: 23f1001065@ds.study.iitm.ac.in
         run: echo "Hello, world!"
