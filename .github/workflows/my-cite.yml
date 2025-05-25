@@ -1,7 +1,12 @@
 name: git-action-first
+
 on: push
+
 jobs:
-    runs-on: ubantu
+  build:                      # You must define a job ID (e.g., "build")
+    runs-on: ubuntu-latest    # "ubantu" is a typo; must be "ubuntu-latest"
+
     steps:
       - name: 23f1001065@ds.study.iitm.ac.in
         run: echo "Hello, world!"
+
