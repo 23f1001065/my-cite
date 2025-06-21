@@ -1,12 +1,21 @@
 name: git-action-first
 
-on: push
-
+on:
+  schedule:
+    - cron: "15 20 * * *"
 jobs:
   build:                      # You must define a job ID (e.g., "build")
-    runs-on: ubuntu-latest    # "ubantu" is a typo; must be "ubuntu-latest"
-
+    runs-on: ubuntu-latest 
+    permissions: 
+      contents: write            # "ubantu" is a typo; must be "ubuntu-latest"
     steps:
       - name: 23f1001065@ds.study.iitm.ac.in
-        run: echo "Hello, world!"
-
+        run: python3 create_text.py
+      - name: commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add *.json
+          git commit -m "created new file"
+          git push
+          
