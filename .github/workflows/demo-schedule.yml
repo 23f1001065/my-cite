@@ -5,10 +5,10 @@ on:
     - cron: "* * * * *"
   workflow_dispatch:
 jobs:
-  test_schedule:                      # You must define a job ID (e.g., "build")
+  test_schedule:                      
     runs-on: ubuntu-latest 
     permissions: 
-      contents: write            # "ubantu" is a typo; must be "ubuntu-latest"
+      contents: write            
     steps:
       - name: 23f1001065@ds.study.iitm.ac.in
         run: python create_json.py
