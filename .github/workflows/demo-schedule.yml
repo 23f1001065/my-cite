@@ -2,7 +2,7 @@ name: test-schedule-demo
 
 on:
   schedule:
-    - cron: "* * * * *"
+    - cron: "5 16 * * *"
   workflow_dispatch:
 jobs:
   test_schedule:                      
