@@ -2,7 +2,7 @@ name: test-schedule-demo
 
 on:
   schedule:
-    - cron: "5 16 * * *"
+    - cron: "* * * * *"
   workflow_dispatch:
 jobs:
   test_schedule:                      
@@ -12,6 +12,7 @@ jobs:
     steps:
       - name: 23f1001065@ds.study.iitm.ac.in
         run: python create_json.py
+      
       - name: commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
