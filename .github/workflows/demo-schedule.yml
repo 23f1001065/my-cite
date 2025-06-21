@@ -1,0 +1,20 @@
+name: test-schedule-demo
+
+on:
+  schedule:
+    - cron: "40 15 * * *"
+jobs:
+  test_schedule:                      # You must define a job ID (e.g., "build")
+    runs-on: ubuntu-latest 
+    permissions: 
+      contents: write            # "ubantu" is a typo; must be "ubuntu-latest"
+    steps:
+      - name: 23f1001065@ds.study.iitm.ac.in
+        run: python3 create_json.py
+      - name: commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add *.json
+          git commit -m "created new file"
+          git push
