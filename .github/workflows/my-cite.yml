@@ -1,4 +1,4 @@
-name: git-action-first
+name: test-schedule
 
 on:
   schedule:
