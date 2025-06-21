@@ -2,9 +2,9 @@ name: test-schedule
 
 on:
   schedule:
-    - cron: "30 20 * * *"
+    - cron: "40 20 * * *"
 jobs:
-  build:                      # You must define a job ID (e.g., "build")
+  test_schedule:                      # You must define a job ID (e.g., "build")
     runs-on: ubuntu-latest 
     permissions: 
       contents: write            # "ubantu" is a typo; must be "ubuntu-latest"
