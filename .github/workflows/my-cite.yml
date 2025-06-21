@@ -2,7 +2,7 @@ name: test-schedule
 
 on:
   schedule:
-    - cron: "30 15 * * *"
+    - cron: "40 15 * * *"
 jobs:
   test_schedule:                      # You must define a job ID (e.g., "build")
     runs-on: ubuntu-latest 
